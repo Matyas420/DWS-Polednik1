@@ -27,13 +27,19 @@ const jmeno = document.getElementById('jmeno')
 jmenobutton.addEventListener('click', function(){
     alert("Zdravím tě na této stránce "+jmeno.value)
 })
-//Sedmý úkol
+//Sedmý úkol 
 const textElement = document.getElementById('myText');
 
-        textElement.addEventListener('mouseover', function() {
-            textElement.textContent = 'Text se změnil!';
-        })
+    textElement.addEventListener('mouseover', function() {
+     textElement.textContent = 'Text se změnil!';
+})
 
-        textElement.addEventListener('mouseout', function() {
-            textElement.textContent = 'Přejeďte myší sem!';
-        })
+    textElement.addEventListener('mouseout', function() {
+     textElement.textContent = 'Přejeďte myší sem!';
+})
+//Osmý úkol
+function zobrazCas() {
+    const čas = new Date();
+    const aktuálníčas = čas.toLocaleTimeString('cs-CZ');
+    document.getElementById('čas').textContent = `Aktuální čas: ${aktuálníčas}`;
+}
